@@ -11,7 +11,7 @@ public class BinarySearch
   public static int binarySearch(int[] arr, int key)
   {
     int length = arr.length-1,low = 0;
-    while(low < length)
+    while(low <= length)
     {
       int mid = low +(length - low)/2;
 
@@ -21,7 +21,7 @@ public class BinarySearch
         low = mid + 1;
 
       else if(arr[mid] > key)
-        low = mid -1;
+        length = mid -1;
     }
     return -1;
   }
